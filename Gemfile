@@ -52,6 +52,10 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  #追加
+  gem "solargraph",          "0.53.4"
+  gem "irb",                 "1.10.0"
+  gem "repl_type_completor", "0.1.2"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -64,4 +68,11 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  #追加
+  gem "webdrivers",               "5.2.0"
+  gem "rails-controller-testing", "1.0.5"
+  gem "minitest",                 "5.18.0"
+  gem "minitest-reporters",       "1.6.0"
+  gem "guard",                    "2.18.0"
+  gem "guard-minitest",           "2.4.6"
 end
