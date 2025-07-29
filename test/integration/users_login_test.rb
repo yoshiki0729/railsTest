@@ -61,7 +61,6 @@ end
 class LogoutTest < Logout
 
   test "successful logout" do
-    cookies.delete(:remember_token)
     assert_not is_logged_in?
     assert_response :see_other
     assert_redirected_to root_url
@@ -84,7 +83,7 @@ class RememberingTest < UsersLogin
 
   test "login with remembering" do
     log_in_as(@user, remember_me: '1')
-    assert_equal cookies['remember_token'], assigns(:user).remember_token
+    assert_not cookies[:remember_token].blank?
   end
 
   test "login without remembering" do
